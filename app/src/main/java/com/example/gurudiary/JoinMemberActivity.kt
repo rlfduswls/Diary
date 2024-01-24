@@ -1,5 +1,6 @@
 package com.example.gurudiary
 
+import android.database.sqlite.SQLiteDatabase
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -10,6 +11,7 @@ class JoinMemberActivity : AppCompatActivity() {
     //회원 가입 페이지 제작 위한 액티비티
 
     lateinit var dbMember: DBManager
+    lateinit var sqlitedb: SQLiteDatabase
     lateinit var name: EditText
     lateinit var id: EditText
     lateinit var idCheck : Button
@@ -38,6 +40,13 @@ class JoinMemberActivity : AppCompatActivity() {
             var str_pass : String = pass.text.toString()
             var str_tel : String = tel.text.toString()
 
+            sqlitedb = dbMember.writableDatabase
+
+            sqlitedb.execSQL("INSERT INTO member VALUES ('"+str_id+"','"+str_name+"','" +str_pass+"','"+str_tel+"');")
+            sqlitedb.close() //회원 정보 등록
+
+
+
             //EditText에서 받아온 정보를 memberDB에 넣어주는 작업
 
             //제출버튼을 눌렀을 때 DB에 추가하는 기능...
@@ -51,5 +60,7 @@ class JoinMemberActivity : AppCompatActivity() {
     //회원 관리 DB 이름은 member입니다
 
     //아이디 중복 검사 함수 !! 아이디가 DB에 존재하면, 토스트 메시지를 띄웁니다.
+
+
 
 }
