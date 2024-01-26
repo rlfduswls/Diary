@@ -18,7 +18,6 @@ class JoinMemberActivity : AppCompatActivity() {
     lateinit var id: EditText
     lateinit var idCheck : Button
     lateinit var pass: EditText
-    lateinit var passCheck : EditText
     lateinit var tel: EditText
     lateinit var submit: Button // 뷰에서 받아올 정보들
     //이 정보들을 db로 업데이트 할 예정입니다
@@ -30,7 +29,6 @@ class JoinMemberActivity : AppCompatActivity() {
         id = findViewById(R.id.userId)
         idCheck = findViewById(R.id.CheckId)
         pass = findViewById(R.id.pass)
-        passCheck = findViewById(R.id.passCheck)
         tel = findViewById(R.id.tel)
         submit = findViewById(R.id.submit)
 
@@ -39,7 +37,6 @@ class JoinMemberActivity : AppCompatActivity() {
 
         idCheck.setOnClickListener {
             //아이디 중복 확인 버튼을 눌렀을 때
-            //이부분 아직 작성중인데 혹시 에러날까봐 잠깐 주석처리 했습니다
             var str_id : String = id.text.toString()
             sqlitedb = dbMember.readableDatabase
             var cursor: Cursor
@@ -47,6 +44,7 @@ class JoinMemberActivity : AppCompatActivity() {
 
             if(cursor.count>=1) //존재할 경우
             {
+                Toast.makeText(this,"이미 존재하는 아이디입니다.",Toast.LENGTH_SHORT).show()
             }
         }
 
