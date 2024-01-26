@@ -38,13 +38,10 @@ class JoinMemberActivity : AppCompatActivity() {
         idCheck.setOnClickListener {
             //아이디 중복 확인 버튼을 눌렀을 때
             var str_id : String = id.text.toString()
-            sqlitedb = dbMember.readableDatabase
-            var cursor: Cursor
-            cursor = sqlitedb.rawQuery("SELECT * FROM personnel WHERE id ='"+str_id+"';", null)
+            var res = dbMember.checkUser(str_id) //해당 id가 존재하면 true를 반환하는 함수
 
-            if(cursor.count>=1) //존재할 경우
-            {
-                Toast.makeText(this,"이미 존재하는 아이디입니다.",Toast.LENGTH_SHORT).show()
+            if(res){
+                Toast.makeText(this,"회원 정보를 모두 입력해주세요.",Toast.LENGTH_SHORT).show()
             }
         }
 
@@ -54,31 +51,24 @@ class JoinMemberActivity : AppCompatActivity() {
             var str_pass : String = pass.text.toString()
             var str_tel : String = tel.text.toString()
 
-            sqlitedb = dbMember.writableDatabase
+            if(str_name==""||str_id==""||str_pass==""||str_tel=="")
+            {
+                Toast.makeText(this,"회원 정보를 모두 입력해주세요.",Toast.LENGTH_SHORT).show()
+            }
 
-            sqlitedb.execSQL("INSERT INTO member VALUES ('"
-                    +str_id+"','"
-                    +str_name+"','"
-                    +str_pass+"','"
-                    +str_tel+"');")
-            sqlitedb.close() //회원 정보 등록
-
-
-
-            //EditText에서 받아온 정보를 memberDB에 넣어주는 작업
-
-            //제출버튼을 눌렀을 때 DB에 추가하는 기능...
+            else{
+                val join = dbMember.insertData(str_id,str_name,str_pass,str_tel) //회원 정보를 insert 합니다
+                if(join)
+                {
+                    Toast.makeText(this,"가입 완료!",Toast.LENGTH_SHORT).show()
+                }
+                else{
+                    Toast.makeText(this,"문제가 발생했습니다. 다시 시도해보세요.",Toast.LENGTH_SHORT).show()
+                }
+            }
         }
 
 
 
     }
-
-    //일단디비를불러올게요
-    //회원 관리 DB 이름은 member입니다
-
-    //아이디 중복 검사 함수 !! 아이디가 DB에 존재하면, 토스트 메시지를 띄웁니다.
-
-
-
 }

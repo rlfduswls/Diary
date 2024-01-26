@@ -1,6 +1,7 @@
 package com.example.gurudiary
 
 
+import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
@@ -16,5 +17,37 @@ class DBManager(context:Context,
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
+    }
+
+    fun insertData (id:String?, name:String?,pass:String?,tel:String?): Boolean {
+        val DB = this.writableDatabase
+        val contentValue = ContentValues()
+
+        contentValue.put("id", id)
+        contentValue.put("name", name)
+        contentValue.put("pass", pass)
+        contentValue.put("tel", tel)
+
+        val result = DB.insert("member",null, contentValue)
+
+        DB.close()
+        if(result==-1L)
+            return false
+        else
+            return true
+    }
+
+
+    fun checkUser(id:String?):Boolean {
+
+        val DB = this.writableDatabase
+        var result = true
+
+        val cursor = DB.rawQuery("SELECT * FROM member where id="+id, null)
+        if(cursor.count<=0) result = false
+        else result = true
+
+        DB.close()
+        return result
     }
 }
