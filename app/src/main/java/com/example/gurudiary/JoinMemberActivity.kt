@@ -1,10 +1,12 @@
 package com.example.gurudiary
 
+import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 
 class JoinMemberActivity : AppCompatActivity() {
 
@@ -34,6 +36,20 @@ class JoinMemberActivity : AppCompatActivity() {
 
         dbMember = DBManager(this, "member", null,1)//회원관리용 db 생성
 
+
+        idCheck.setOnClickListener {
+            //아이디 중복 확인 버튼을 눌렀을 때
+            //이부분 아직 작성중인데 혹시 에러날까봐 잠깐 주석처리 했습니다
+            var str_id : String = id.text.toString()
+            sqlitedb = dbMember.readableDatabase
+            var cursor: Cursor
+            cursor = sqlitedb.rawQuery("SELECT * FROM personnel WHERE id ='"+str_id+"';", null)
+
+            if(cursor.count>=1) //존재할 경우
+            {
+            }
+        }
+
         submit.setOnClickListener {
             var str_name : String = name.text.toString()
             var str_id : String = id.text.toString()
@@ -42,7 +58,11 @@ class JoinMemberActivity : AppCompatActivity() {
 
             sqlitedb = dbMember.writableDatabase
 
-            sqlitedb.execSQL("INSERT INTO member VALUES ('"+str_id+"','"+str_name+"','" +str_pass+"','"+str_tel+"');")
+            sqlitedb.execSQL("INSERT INTO member VALUES ('"
+                    +str_id+"','"
+                    +str_name+"','"
+                    +str_pass+"','"
+                    +str_tel+"');")
             sqlitedb.close() //회원 정보 등록
 
 
