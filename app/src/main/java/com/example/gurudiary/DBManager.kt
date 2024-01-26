@@ -50,4 +50,23 @@ class DBManager(context:Context,
         DB.close()
         return result
     }
+
+
+    fun checkPass(id:String, pass:String):Boolean {
+        val DB = this.writableDatabase
+        var result = true
+
+        val cursor = DB.rawQuery("SELECT * FROM member where id="+id+"AND pass="+pass, null)
+        if(cursor.count<=0) result = false
+        else result = true
+
+        DB.close()
+        return result
+
+    }
+
+    companion object{
+        const val DBNAME = "Login.db"
+    }
+
 }
