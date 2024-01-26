@@ -8,125 +8,120 @@
     tools:context=".JoinMemberActivity">
 
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="127dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"
+        android:src="@drawable/logo" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="회원 가입을 위한 정보를 입력하세요"
-        android:textAlignment="center" />
-
+        android:textSize="12sp"
+        android:layout_marginLeft="50dp"
+        android:text="하루의 마무리를 HAPPY DIARY로 마무리하세요. "
+        android:textColor="@color/blue1"
+        />
     <LinearLayout
+        android:layout_marginTop="33dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="30dp">
+        android:orientation="horizontal">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="120dp"
             android:layout_height="wrap_content"
-            android:text="이름 : "/>
-        <EditText
-            android:id="@+id/name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
-    </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="30dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ID : "/>
-
-        <EditText
-            android:id="@+id/userId"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content" />
-
+            android:layout_marginLeft="33dp"
+            android:layout_marginBottom="5dp"
+            android:text="아이디를 입력해주세요."
+            android:textColor="@color/blue2"
+            android:textSize="11sp"/>
         <Button
             android:id="@+id/CheckId"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="5dp"
-            android:layout_marginLeft="10dp"
-            android:text="중복 확인"
-            android:textAlignment="center" />
+            android:textSize="9sp"
+            android:textColor="@color/blue2"
+            android:text="중복확인"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:stateListAnimator="@null"/>
     </LinearLayout>
 
-    <LinearLayout
+
+    <EditText
+        android:background="@drawable/box"
+        android:id="@+id/userId"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="30dp" />
+
+    <TextView
+        android:layout_marginBottom="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="30dp">
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="33dp"
+        android:textSize="11sp"
+        android:text="비밀번호를 입력해주세요."
+        android:textColor="@color/blue2"
+        />
+    <EditText
+        android:background="@drawable/box"
+        android:id="@+id/pass"
+        android:layout_marginLeft="30dp"
+        android:layout_height="30dp"
+        android:layout_width="300dp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="비밀번호 : "/>
-
-        <EditText
-            android:id="@+id/pass"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content" />
-
-    </LinearLayout>
-
-    <LinearLayout
+    <TextView
+        android:layout_marginBottom="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="30dp">
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="33dp"
+        android:textSize="11sp"
+        android:text="이름을 입력해주세요."
+        android:textColor="@color/blue2"
+        />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="비밀번호 확인 : "/>
+    <EditText
+        android:background="@drawable/box"
+        android:id="@+id/name"
+        android:layout_marginLeft="30dp"
+        android:layout_width="300dp"
+        android:layout_height="30dp"/>
 
-        <EditText
-            android:id="@+id/passCheck"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content" />
-
-    </LinearLayout>
-
-
-    <LinearLayout
+    <TextView
+        android:layout_marginBottom="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="30dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="전화번호 : "/>
-
-        <EditText
-            android:id="@+id/tel"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content" />
-
-    </LinearLayout>
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="33dp"
+        android:textSize="11sp"
+        android:text="전화번호를 입력해주세요."
+        android:textColor="@color/blue2"
+        />
 
 
-    <LinearLayout
-        android:layout_width="wrap_content"
+    <EditText
+        android:background="@drawable/box"
+        android:id="@+id/tel"
+        android:layout_marginLeft="30dp"
+        android:layout_width="300dp"
+        android:layout_height="30dp" />
+
+    <Button
+        android:id="@+id/submit"
+        android:textColor="@color/blue3"
+        android:layout_width="300dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:background="#E9F0F7"
+        android:stateListAnimator="@null"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="30dp">
+        android:text="회원가입" />
 
-        <Button
-            android:id="@+id/submit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="제출" />
-
-    </LinearLayout>
 
 
 
