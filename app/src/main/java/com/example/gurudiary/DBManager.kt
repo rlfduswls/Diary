@@ -43,7 +43,7 @@ class DBManager(context:Context,
         val DB = this.writableDatabase
         var result = true
 
-        val cursor = DB.rawQuery("SELECT * FROM member where id="+id, null)
+        val cursor = DB.rawQuery("SELECT * FROM member WHERE id= '"+id+"';", null)
         if(cursor.count<=0) result = false
         else result = true
 
@@ -56,7 +56,7 @@ class DBManager(context:Context,
         val DB = this.writableDatabase
         var result = true
 
-        val cursor = DB.rawQuery("SELECT * FROM member where id="+id+"AND pass="+pass, null)
+        val cursor = DB.rawQuery("SELECT * FROM member WHERE id= '"+id+"'AND pass= '"+pass + "';", null)
         if(cursor.count<=0) result = false
         else result = true
 
