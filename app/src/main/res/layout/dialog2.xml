@@ -16,7 +16,7 @@
         android:gravity="center"
         android:minHeight="50dp"
         android:textSize="13sp"
-        tools:text="중복된 아이디가 있습니다.
+        tools:text="중복된 아이디가 있습니다.\n
 다른 아이디를 작성해주세요."/>
 
 

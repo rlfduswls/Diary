@@ -65,6 +65,7 @@ class DBManager(context:Context,
 
     }
 
+
     companion object{
         const val DBNAME = "Login.db"
     }

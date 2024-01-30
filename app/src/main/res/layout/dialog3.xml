@@ -12,11 +12,11 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/blue4"
         android:gravity="center"
         android:minHeight="50dp"
+        android:textColor="@color/blue4"
         android:textSize="13sp"
-        tools:text="아이디 중복확인을 해주세요." />
+        tools:text="모든 항목을 작성해주세요." />
 
     <LinearLayout
         android:layout_width="match_parent"
