@@ -17,7 +17,7 @@
 
     <EditText
         android:background="@drawable/box"
-        android:id="@+id/userId"
+        android:id="@+id/pass"
         android:textSize="13dp"
         android:layout_marginLeft="30dp"
         android:layout_marginBottom="10dp"
@@ -30,7 +30,7 @@
     <EditText
         android:textSize="13dp"
         android:background="@drawable/box"
-        android:id="@+id/pass"
+        android:id="@+id/name"
         android:layout_marginLeft="30dp"
         android:layout_width="300dp"
         android:layout_height="40dp"
@@ -58,6 +58,7 @@
         android:stateListAnimator="@null"
         android:layout_height="20dp"
         android:text="회원가입" />
+
 
 
 </LinearLayout>
