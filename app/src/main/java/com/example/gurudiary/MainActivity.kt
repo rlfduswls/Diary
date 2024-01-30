@@ -29,7 +29,6 @@ class MainActivity : AppCompatActivity() {
         joinSubmit = findViewById(R.id.joinsubmit)
         id = findViewById(R.id.userId)
         pass = findViewById(R.id.pass)
-        var dlg3 = AlertDialog.Builder(this)
 
 
         loginSubmit.setOnClickListener {

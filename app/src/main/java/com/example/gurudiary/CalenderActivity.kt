@@ -43,6 +43,8 @@ class CalenderActivity : AppCompatActivity() {
             //intent.putExtra("userID", userID) // 이전 액티비티에서 받아온 userID를 전달
             startActivity(intent)
         }
+
+/**
         val tab1Button: Button = findViewById(R.id.tab1)
         val tab2Button: Button = findViewById(R.id.tab2)
         val tab3Button: Button = findViewById(R.id.tab3)
@@ -62,7 +64,7 @@ class CalenderActivity : AppCompatActivity() {
                 startActivity(intent)
             }
         }
-
+**/
 
     }
 }

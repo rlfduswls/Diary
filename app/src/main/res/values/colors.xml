@@ -12,4 +12,9 @@
     <color name="blue3">#A9AAC1</color>
     <color name="blue4">#6D76CB</color>
     <color name="blue5">#E3E2F3</color>
+    <color name="yellow">#FBF9BF</color>
+    <color name="selected_day_color">#FBF9BF</color>
+    <color name="selected_date_background_color">#FBF9BF</color>
+    <color name="calendar_day_text_color">#5E8FF4</color>
+    <color name="today_date_color">#FF0000</color>
 </resources>

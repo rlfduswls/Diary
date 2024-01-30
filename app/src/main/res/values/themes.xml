@@ -5,8 +5,22 @@
         <item name="colorPrimary">@color/purple_500</item>
         <item name="windowNoTitle">true</item>
         <item name="colorPrimaryDark">@color/purple_700</item>
-        <item name="colorAccent">@color/teal_200</item>
+        <item name="colorAccent">@color/yellow</item>
         <!-- Customize your theme here. -->
-        <item name="windowNoTitle">true</item>
     </style>
+
+    <!-- res/values/styles.xml -->
+    <style name="CustomCalendarDayTextAppearance" parent="@android:style/TextAppearance.DeviceDefault.Small">
+        <item name="android:textColor">@color/calendar_day_text_color</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="CustomCalendarWeekDayTextAppearance" parent="@android:style/TextAppearance.Widget.TextView">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="CustomCalendarYearTextAppearance" parent="@android:style/TextAppearance.DeviceDefault">
+        <item name="android:textSize">20sp</item>
+    </style>
+
 </resources>

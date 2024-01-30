@@ -1,130 +1,224 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical" >
+    android:id="@+id/x_"
+    android:layout_width="360dp"
+    android:layout_height="640dp"
+    android:clipToOutline="true"
+    android:background="#FFFFFF">
 
     <TextView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:gravity= "center"
-        android:id="@+id/diaryTextView" android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
-        app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
-        android:layout_marginStart="8dp" android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        tools:ignore="MissingConstraints" />
-    <EditText
-        android:layout_width="0dp"
-        android:layout_height="116dp"
-        android:inputType="textMultiLine"
-        android:ems="10"
-        android:id="@+id/contextEditText"
-        app:layout_constraintTop_toBottomOf="@+id/diaryTextView" android:layout_marginTop="16dp"
-        android:hint="내용을 입력하세요." android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginRight="8dp" android:layout_marginStart="8dp"
-        app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
-        android:visibility="invisible"/>
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/contextEditText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/contextEditText"
-        app:layout_constraintTop_toTopOf="@+id/contextEditText" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:gravity="center"
-        android:text="달력일기장"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="#9E28B3"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:gravity="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
-    <ImageView
-        android:id="@+id/photoImageView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        android:scaleType="centerCrop" />
-
-    <!-- 확인 버튼 -->
-    <Button
-        android:id="@+id/confirmButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/okbutton"
+        android:layout_width="28.5dp"
+        android:layout_height="23.32dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="320dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20.5dp"
+        android:gravity="top"
         android:text="확인"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="#B2C5EA"
+        android:textSize="35px" />
 
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="16dp" />
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="60dp"
+        android:background="?android:attr/listDivider" />
 
+    <TextView
+        android:id="@+id/leftpage"
+        android:layout_width="29.29dp"
+        android:layout_height="23.43dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="91dp"
+        android:layout_marginTop="75dp"
+        android:gravity="left"
+        android:text="<"
+        android:textSize="35px" />
+
+    <TextView
+        android:id="@+id/rightpage"
+        android:layout_width="29.29dp"
+        android:layout_height="23.43dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="91dp"
+        android:layout_marginTop="75dp"
+        android:gravity="right"
+        android:text=">"
+        android:textSize="35px" />
+
+    <TextView
+        android:id="@+id/leftwt"
+        android:layout_width="29.29dp"
+        android:layout_height="23.43dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="140dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="111.55dp"
+        android:text="<"
+        android:gravity="left"
+        android:textColor="#8078DA"/>
+
+    <View
+        android:id="@+id/wt_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="160dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/circle"
+        />
+
+    <TextView
+        android:id="@+id/rightwt"
+        android:layout_width="29.29dp"
+        android:layout_height="23.43dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="140dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="111.55dp"
+        android:text=">"
+        android:gravity="right"
+        android:textColor="#8078DA"/>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="101dp"
+        app:srcCompat="@drawable/sun" />
+
+    <EditText
+        android:id="@+id/memo_editText"
+        android:layout_width="320dp"
+        android:layout_height="310dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="260dp"
+        android:background="@drawable/border"
+        android:gravity="top"
+        android:hint=" 오늘의 내용을 적어보세요."
+        android:textSize="35px" />
+
+    <EditText
+        android:id="@+id/title_editText"
+        android:layout_width="320dp"
+        android:layout_height="28.5dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="180dp"
+        android:background="@drawable/border"
+        android:hint=" 하루의 제목을 적어보세요."
+        android:textSize="35px" />
+
+    <TextView
+        android:id="@+id/memo"
+        android:layout_width="70dp"
+        android:layout_height="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="145dp"
+        android:layout_marginTop="232dp"
+        android:gravity="center"
+        android:text="오늘의 내용"
+        android:textColor="#B2C5EA"
+        android:textSize="35px" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="70dp"
+        android:layout_height="17dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="145dp"
+        android:layout_marginTop="75dp"
+        android:gravity="center"
+        android:text="2023.11.03"
+        android:textColor="#91AFEC"
+        android:textSize="35px" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="80dp"
+        android:layout_height="91.11dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="-14dp"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="70dp"
+        android:layout_height="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentCenter="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="145dp"
+        android:layout_marginTop="153.37dp"
+        android:gravity="center"
+        android:text="오늘의 제목"
+        android:textColor="#B2C5EA"
+        android:textSize="35px" />
+
+    <!-- Auto layout, variables, and unit scale are not yet supported -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        android:layout_marginTop="518dp"
+        android:orientation="horizontal">
 
         <Button
-            android:id="@+id/tab1"
+            android:id="@+id/logout"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:text="로그아웃"
+            android:textSize="15sp"
+            android:textColor="#A4BDF1"
             android:gravity="center"
-            android:text="로그아웃" />
+            android:background="#ffffff"
+            android:stateListAnimator="@null"/>
 
         <Button
-            android:id="@+id/tab2"
+            android:id="@+id/main"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:gravity="center"
-            android:text="메인" />
+            android:text="메인"
+            android:textSize="15sp"
+            android:textColor="#A4BDF1"
+            android:background="#ffffff"
+            android:stateListAnimator="@null"
+            android:gravity="center"/>
 
         <Button
-            android:id="@+id/tab3"
+            android:id="@+id/list"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:gravity="center"
-            android:text="나의 기록" />
+            android:text="나의 기록"
+            android:textSize="15sp"
+            android:background="#ffffff"
+            android:stateListAnimator="@null"
+            android:textColor="#A4BDF1"
+            android:gravity="center"/>
+
     </LinearLayout>
-
-
-
-
-
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
