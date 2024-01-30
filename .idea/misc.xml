@@ -4,10 +4,17 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/rlfdu/AndroidStudioProjects/guruDiary/app/src/main/res/drawable-v24/box.xml" value="0.325" />
+        <entry key="..\:/Users/rlfdu/AndroidStudioProjects/guruDiary/app/src/main/res/drawable-v24/ic_launcher_background.xml" value="0.23177083333333334" />
+        <entry key="..\:/Users/rlfdu/AndroidStudioProjects/guruDiary/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.23177083333333334" />
         <entry key="..\:/Users/rlfdu/AndroidStudioProjects/guruDiary/app/src/main/res/drawable-v24/logo_1.xml" value="0.25104166666666666" />
+        <entry key="..\:/Users/rlfdu/AndroidStudioProjects/guruDiary/app/src/main/res/drawable-v24/view_round_blue.xml" value="0.23177083333333334" />
+        <entry key="..\:/Users/rlfdu/AndroidStudioProjects/guruDiary/app/src/main/res/drawable-v24/view_round_white_6.xml" value="0.23177083333333334" />
+        <entry key="..\:/Users/rlfdu/AndroidStudioProjects/guruDiary/app/src/main/res/drawable/ic_launcher_background.xml" value="0.23177083333333334" />
         <entry key="..\:/Users/rlfdu/AndroidStudioProjects/guruDiary/app/src/main/res/drawable/join.xml" value="0.2388888888888889" />
         <entry key="..\:/Users/rlfdu/AndroidStudioProjects/guruDiary/app/src/main/res/layout/activity_join_member.xml" value="0.19199999414062519" />
         <entry key="..\:/Users/rlfdu/AndroidStudioProjects/guruDiary/app/src/main/res/layout/activity_main.xml" value="0.25343999226562525" />
+        <entry key="..\:/Users/rlfdu/AndroidStudioProjects/guruDiary/app/src/main/res/layout/dialog1.xml" value="0.215625" />
+        <entry key="..\:/Users/rlfdu/AndroidStudioProjects/guruDiary/app/src/main/res/layout/dialog4.xml" value="0.215625" />
       </map>
     </option>
   </component>

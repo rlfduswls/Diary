@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/view_round_white_6"
+    android:gravity="center"
+    android:minWidth="300dp"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/confirmTextView"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/blue4"
+        android:gravity="center"
+        android:minHeight="50dp"
+        android:textSize="13sp"
+        tools:text="중복된 아이디가 있습니다.
+다른 아이디를 작성해주세요."/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="149dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/yesButton"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:textColor="@color/blue4"
+            android:text="확인"
+            android:background="@drawable/view_round_blue"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+</LinearLayout>
