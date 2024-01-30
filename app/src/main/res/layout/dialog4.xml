@@ -10,7 +10,6 @@
     android:padding="20dp">
 
     <TextView
-        android:id="@+id/confirmTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/blue4"
@@ -27,7 +26,6 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/noButton"
             android:layout_width="70dp"
             android:layout_height="30dp"
             android:layout_marginEnd="7dp"
@@ -38,7 +36,6 @@
             />
 
         <Button
-            android:id="@+id/yesButton"
             android:layout_width="70dp"
             android:layout_height="30dp"
             android:textColor="@color/blue4"
