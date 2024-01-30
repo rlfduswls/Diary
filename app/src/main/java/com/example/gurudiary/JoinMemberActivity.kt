@@ -41,7 +41,7 @@ class JoinMemberActivity : AppCompatActivity() {
             var res = dbMember.checkUser(str_id) //해당 id가 존재하면 true를 반환하는 함수
 
             if(res){
-                Toast.makeText(this,"회원 정보를 모두 입력해주세요.",Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,"이미 존재하는 아이디입니다.",Toast.LENGTH_SHORT).show()
             }
         }
 

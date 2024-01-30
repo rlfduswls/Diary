@@ -37,7 +37,6 @@ class MainActivity : AppCompatActivity() {
             var checkID = dbMember.checkUser(str_id) //아이디가 DB에 존재하는지 확인합니다.
 
             if(!checkID)
-            //예외처리 필요합니다. 어떻게 구현할지 고민중이에요~
             {
                 Toast.makeText(this,"존재하지 않는 ID입니다.", Toast.LENGTH_SHORT).show()
             }
@@ -52,7 +51,13 @@ class MainActivity : AppCompatActivity() {
                 else
                 {
                     Toast.makeText(this,"로그인 성공.", Toast.LENGTH_SHORT).show()
+
+                    val intent = Intent(this, CalenderActivity::class.java)
+                    startActivity(intent)
+                    //캘린더 페이지로 이동합니다.
+
                 }
+
 
             }
 

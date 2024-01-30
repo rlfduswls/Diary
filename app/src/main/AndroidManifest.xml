@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GuruDiary">
         <activity
+            android:name=".CalenderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DiaryActivity"
+            android:exported="false" />
+        <activity
             android:name=".JoinMemberActivity"
             android:exported="false" />
         <activity
