@@ -46,9 +46,9 @@ class CalenderActivity : AppCompatActivity() {
         }
 
 
-        val tab1Button: Button = findViewById(R.id.logout)
-        val tab2Button: Button = findViewById(R.id.main)
-        val tab3Button: Button = findViewById(R.id.list)
+        var tab1Button: Button = findViewById(R.id.logout)
+        var tab2Button: Button = findViewById(R.id.main)
+        var tab3Button: Button = findViewById(R.id.list)
 
         tab1Button.setOnClickListener {
             // tab1 클릭 시 동작
