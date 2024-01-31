@@ -7,30 +7,36 @@ import android.widget.Button
 
 class DiaryListActivity : AppCompatActivity() {
 
-    lateinit var btnLogout: Button
-    lateinit var btnMain: Button
-    lateinit var btnList : Button
+    //다이어리 목록
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_diary_list)
 
-        btnLogout.findViewById<Button>(R.id.logout)
-        btnList.findViewById<Button>(R.id.list)
-        btnMain.findViewById<Button>(R.id.main)
+        var tab1Button: Button = findViewById(R.id.logout)
+        var tab2Button: Button = findViewById(R.id.main)
+        var tab3Button: Button = findViewById(R.id.list)
 
-        btnLogout.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+        tab1Button.setOnClickListener {
+            // tab1 클릭 시 동작
+            val intent = Intent(this@DiaryListActivity, MainActivity::class.java)
+            startActivity(intent)
+
+        }
+
+        tab2Button.setOnClickListener {
+            // tab2 클릭 시 동작
+
+            val intent = Intent(this@DiaryListActivity, CalenderActivity::class.java)
             startActivity(intent)
         }
 
-        btnMain.setOnClickListener {
-            val intent = Intent(this, DiaryListActivity::class.java)
-            startActivity(intent)
-        }
+        tab3Button.setOnClickListener {
+            // tab3 클릭 시 동작
 
-        btnList.setOnClickListener {
-            val intent = Intent(this, DiaryListActivity::class.java)
+            val intent = Intent(this@DiaryListActivity, DiaryListActivity::class.java)
             startActivity(intent)
+
         }
     }
 }

@@ -51,10 +51,6 @@ class DiaryActivity : AppCompatActivity() {
         wtIcon = findViewById(R.id.wt_icon)
         pageLayout = findViewById(R.id.page)
 
-        btnLogout = findViewById(R.id.logout)
-        btnMain = findViewById(R.id.main)
-        btnList = findViewById(R.id.list)
-
         // 날짜 선택
         calendarView.setOnDateChangeListener { _, year, month, dayOfMonth ->
             val dateText = "${year}년 ${month + 1}월 ${dayOfMonth}일"
@@ -87,18 +83,7 @@ class DiaryActivity : AppCompatActivity() {
             saveToInternalStorage(memo_editText.text.toString())
         }
 
-        // 하단 버튼 기능
-        btnLogout.setOnClickListener {
-            startActivity(Intent(this@DiaryActivity, DBManager::class.java))
-        }
 
-        btnMain.setOnClickListener {
-            startActivity(Intent(this@DiaryActivity, DiaryListActivity::class.java))
-        }
-
-        btnList.setOnClickListener {
-            startActivity(Intent(this@DiaryActivity, DiaryListActivity::class.java))
-        }
     }
 
     private fun updateWtIconImage() {

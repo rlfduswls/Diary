@@ -52,7 +52,7 @@ class CalenderActivity : AppCompatActivity() {
 
         tab1Button.setOnClickListener {
             // tab1 클릭 시 동작
-            val intent = Intent(this@CalenderActivity, DBManager::class.java)
+            val intent = Intent(this@CalenderActivity, MainActivity::class.java)
             startActivity(intent)
 
         }
@@ -67,7 +67,7 @@ class CalenderActivity : AppCompatActivity() {
         tab3Button.setOnClickListener {
             // tab3 클릭 시 동작
 
-            val intent = Intent(this@CalenderActivity, DiaryActivity::class.java)
+            val intent = Intent(this@CalenderActivity, DiaryListActivity::class.java)
             startActivity(intent)
 
         }
