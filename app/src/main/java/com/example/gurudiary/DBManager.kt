@@ -3,6 +3,7 @@ package com.example.gurudiary
 
 import android.content.ContentValues
 import android.content.Context
+import android.content.Intent
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 
@@ -61,6 +62,8 @@ class DBManager(context:Context,
         else result = true
 
         DB.close()
+
+
         return result
 
     }

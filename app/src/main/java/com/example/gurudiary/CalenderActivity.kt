@@ -11,6 +11,7 @@ import java.io.FileInputStream
 import java.io.FileOutputStream
 import android.content.Intent
 import com.example.gurudiary.DiaryActivity
+
 import com.example.gurudiary.R
 
 
@@ -44,27 +45,33 @@ class CalenderActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-/**
-        val tab1Button: Button = findViewById(R.id.tab1)
-        val tab2Button: Button = findViewById(R.id.tab2)
-        val tab3Button: Button = findViewById(R.id.tab3)
+
+        val tab1Button: Button = findViewById(R.id.logout)
+        val tab2Button: Button = findViewById(R.id.main)
+        val tab3Button: Button = findViewById(R.id.list)
 
         tab1Button.setOnClickListener {
             // tab1 클릭 시 동작
+            val intent = Intent(this@CalenderActivity, DBManager::class.java)
+            startActivity(intent)
+
         }
 
         tab2Button.setOnClickListener {
             // tab2 클릭 시 동작
+
+            val intent = Intent(this@CalenderActivity, CalenderActivity::class.java)
+            startActivity(intent)
         }
 
         tab3Button.setOnClickListener {
             // tab3 클릭 시 동작
-            tab3Button.setOnClickListener {
-                val intent = Intent(this@CalenderActivity, DiaryActivity::class.java)
-                startActivity(intent)
-            }
+
+            val intent = Intent(this@CalenderActivity, DiaryActivity::class.java)
+            startActivity(intent)
+
         }
-**/
+
 
     }
 }

@@ -33,8 +33,7 @@
         app:layout_constraintTop_toTopOf="parent"
         android:headerView="@layout/custom_calendar_header"
         android:dateTextAppearance="@style/CustomCalendarDayTextAppearance"
-        android:weekDayTextAppearance="@style/CustomCalendarWeekDayTextAppearance"
-        />
+        android:weekDayTextAppearance="@style/CustomCalendarWeekDayTextAppearance" />
 
 
     <View
