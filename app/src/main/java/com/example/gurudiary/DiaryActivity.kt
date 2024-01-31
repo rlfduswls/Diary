@@ -20,6 +20,10 @@ class DiaryActivity : AppCompatActivity() {
     private lateinit var textView2: TextView
     private lateinit var confirmButton: Button
     private lateinit var photoImageView: ImageView
+
+    lateinit var btnLogout: Button
+    lateinit var btnMain: Button
+    lateinit var btnList : Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_diary)
@@ -29,10 +33,29 @@ class DiaryActivity : AppCompatActivity() {
         confirmButton = findViewById(R.id.confirmButton)
         photoImageView = findViewById(R.id.photoImageView)
 
+        btnLogout.findViewById<Button>(R.id.logout)
+        btnList.findViewById<Button>(R.id.list)
+        btnMain.findViewById<Button>(R.id.main)
+
         // 기존 코드 유지
 
         confirmButton.setOnClickListener {
             saveToInternalStorage(textView2.text.toString())
+        }
+
+        btnLogout.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnMain.setOnClickListener {
+            val intent = Intent(this, DiaryListActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnList.setOnClickListener {
+            val intent = Intent(this, DiaryListActivity::class.java)
+            startActivity(intent)
         }
     }
 

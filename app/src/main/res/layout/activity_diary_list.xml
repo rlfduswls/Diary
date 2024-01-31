@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToOutline="true"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="91.11dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="-14dp"
+        app:srcCompat="@drawable/logo" />
+
+
+    <Button
+        android:id="@+id/mdbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="1dp"
+        android:background="#00000000"
+        android:gravity="right|center"
+        android:text="수정"
+        android:textColor="#A4BDF1"
+        android:textSize="35px" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="60dp"
+        android:background="?android:attr/listDivider" />
+
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="460dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/circle"
+                />
+
+            <ImageView
+                android:id="@+id/wt_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                app:srcCompat="@drawable/sun" />
+
+            <TextView
+                android:id="@+id/title1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="19dp"
+                android:text="일기 제목입니다3"
+                android:textSize="50px"
+                android:textColor="#B2C5EA"/>
+
+            <TextView
+                android:id="@+id/date1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="83dp"
+                android:layout_marginTop="44dp"
+                android:text="2023.11.07"
+                android:textSize="35px"
+                android:textColor="#B8AEAE"/>
+
+            <TextView
+                android:id="@+id/memo1"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="80dp"
+                android:text="오늘의 내용을 적어보세요. 오늘 하루는 어땠는지 기록해보는 습관을 가져봐요.
+그날의 기분, 날씨, 어떤 일들이 있었는지
+나만의 일기장에 남겨봅시다."
+                android:textSize="35px"
+                android:textColor="#B8AEAE"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="152dp"
+                android:background="?android:attr/listDivider" />
+
+            <View
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="170dp"
+                android:background="@drawable/circle"
+                />
+
+            <ImageView
+                android:id="@+id/wt_icon2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="170dp"
+                app:srcCompat="@drawable/sun" />
+
+            <TextView
+                android:id="@+id/title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="169dp"
+                android:text="일기 제목입니다2"
+                android:textSize="50px"
+                android:textColor="#B2C5EA"/>
+
+            <TextView
+                android:id="@+id/date2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="83dp"
+                android:layout_marginTop="194dp"
+                android:text="2023.11.07"
+                android:textSize="35px"
+                android:textColor="#B8AEAE"/>
+
+            <TextView
+                android:id="@+id/memo2"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="230dp"
+                android:text="오늘의 내용을 적어보세요. 오늘 하루는 어땠는지 기록해보는 습관을 가져봐요.
+그날의 기분, 날씨, 어떤 일들이 있었는지
+나만의 일기장에 남겨봅시다."
+                android:textSize="35px"
+                android:textColor="#B8AEAE"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="302dp"
+                android:background="?android:attr/listDivider" />
+
+            <View
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="320dp"
+                android:background="@drawable/circle"
+                />
+
+            <ImageView
+                android:id="@+id/wt_icon3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="320dp"
+                app:srcCompat="@drawable/sun" />
+
+            <TextView
+                android:id="@+id/title3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="319dp"
+                android:text="일기 제목입니다1"
+                android:textSize="50px"
+                android:textColor="#B2C5EA"/>
+
+            <TextView
+                android:id="@+id/date3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="83dp"
+                android:layout_marginTop="344dp"
+                android:text="2023.11.07"
+                android:textSize="35px"
+                android:textColor="#B8AEAE"/>
+
+            <TextView
+                android:id="@+id/memo3"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="380dp"
+                android:text="오늘의 내용을 적어보세요. 오늘 하루는 어땠는지 기록해보는 습관을 가져봐요.
+그날의 기분, 날씨, 어떤 일들이 있었는지
+나만의 일기장에 남겨봅시다."
+                android:textSize="35px"
+                android:textColor="#B8AEAE"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="452dp"
+                android:background="?android:attr/listDivider" />
+
+            <View
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="470dp"
+                android:background="@drawable/circle"
+                />
+
+            <ImageView
+                android:id="@+id/wt_icon4"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="470dp"
+                app:srcCompat="@drawable/sun" />
+
+            <TextView
+                android:id="@+id/title4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="469dp"
+                android:text="일기 제목입니다1"
+                android:textSize="50px"
+                android:textColor="#B2C5EA"/>
+
+            <TextView
+                android:id="@+id/date4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="83dp"
+                android:layout_marginTop="494dp"
+                android:text="2023.11.07"
+                android:textSize="35px"
+                android:textColor="#B8AEAE"/>
+
+            <TextView
+                android:id="@+id/memo4"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="530dp"
+                android:text="오늘의 내용을 적어보세요. 오늘 하루는 어땠는지 기록해보는 습관을 가져봐요.
+그날의 기분, 날씨, 어떤 일들이 있었는지
+나만의 일기장에 남겨봅시다."
+                android:textSize="35px"
+                android:textColor="#B8AEAE"/>
+
+            <TextView
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="590dp"
+                android:text="" />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="519dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/logout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="로그아웃"
+            android:textSize="15sp"
+            android:textColor="#A4BDF1"
+            android:gravity="center"
+            android:background="#ffffff"
+            android:stateListAnimator="@null"/>
+
+        <Button
+            android:id="@+id/main"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="메인"
+            android:textSize="15sp"
+            android:textColor="#A4BDF1"
+            android:background="#ffffff"
+            android:stateListAnimator="@null"
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/list"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="나의 기록"
+            android:textSize="15sp"
+            android:background="#ffffff"
+            android:stateListAnimator="@null"
+            android:textColor="#A4BDF1"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
