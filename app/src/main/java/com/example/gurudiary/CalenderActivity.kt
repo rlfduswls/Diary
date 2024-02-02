@@ -1,19 +1,13 @@
 package com.example.gurudiary
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
 import android.widget.CalendarView
 import android.widget.EditText
 import android.widget.TextView
-import java.io.FileInputStream
-import java.io.FileOutputStream
-import android.content.Intent
-import com.example.gurudiary.DiaryActivity
-
-import com.example.gurudiary.R
-
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 
 
 class CalenderActivity : AppCompatActivity() {

@@ -1,9 +1,11 @@
 package com.example.gurudiary
 
 import android.content.Intent
+import android.database.Cursor
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import java.io.File
 
 class DiaryListActivity : AppCompatActivity() {
 
@@ -13,9 +15,14 @@ class DiaryListActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_diary_list)
 
+
+
         var tab1Button: Button = findViewById(R.id.logout)
         var tab2Button: Button = findViewById(R.id.main)
         var tab3Button: Button = findViewById(R.id.list)
+
+        var fileManager: FileManager = FileManager()
+        var cursor: Cursor
 
         tab1Button.setOnClickListener {
             // tab1 클릭 시 동작

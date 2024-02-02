@@ -10,6 +10,7 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import java.io.File
 import java.io.FileOutputStream
 import java.util.Date
 
@@ -31,9 +32,6 @@ class DiaryActivity : AppCompatActivity() {
         R.drawable.sun
     )
 
-    private lateinit var btnLogout: Button
-    private lateinit var btnMain: Button
-    private lateinit var btnList: Button
 
     private lateinit var pageLayout: LinearLayout
 
@@ -49,13 +47,15 @@ class DiaryActivity : AppCompatActivity() {
         date = findViewById(R.id.date)
         calendarView = findViewById(R.id.calendarView)
         wtIcon = findViewById(R.id.wt_icon)
-        pageLayout = findViewById(R.id.page)
+        //pageLayout = findViewById(R.id.page)
 
-        // 날짜 선택
-        calendarView.setOnDateChangeListener { _, year, month, dayOfMonth ->
-            val dateText = "${year}년 ${month + 1}월 ${dayOfMonth}일"
-            date.text = dateText
-        }
+        var fileManager = FileManager()
+
+        var year = intent.getIntExtra("year",0)
+        var month = intent.getIntExtra("month",0)
+        var dayOfMonth = intent.getIntExtra("day",0)
+        val dateText = "${year}년 ${month + 1}월 ${dayOfMonth}일"
+        date.text = dateText
 
         // 날씨 아이콘 변경
         val leftWtButton: Button = findViewById(R.id.leftwt)
@@ -79,8 +79,10 @@ class DiaryActivity : AppCompatActivity() {
 
         // 기존 코드 유지
         okbutton.setOnClickListener {
-            saveToInternalStorage(title_editText.text.toString())
-            saveToInternalStorage(memo_editText.text.toString())
+
+            var filename = "${year}-${month + 1}-${dayOfMonth}"
+
+            fileManager.saveToInternalStorage(filename,memo_editText.text.toString())
         }
 
 
@@ -90,18 +92,8 @@ class DiaryActivity : AppCompatActivity() {
         wtIcon.setImageResource(imageResources[currentImageIndex])
     }
 
-    private fun saveToInternalStorage(content: String) {
-        val fileName = "diary_content.txt"
-        val fos: FileOutputStream
 
-        try {
-            fos = openFileOutput(fileName, MODE_PRIVATE)
-            fos.write(content.toByteArray())
-            fos.close()
-        } catch (e: Exception) {
-            e.printStackTrace()
-        }
-    }
+
 
     private fun openGallery() {
         val galleryIntent = Intent(Intent.ACTION_PICK)

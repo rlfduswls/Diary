@@ -84,7 +84,7 @@
         <EditText
             android:id="@+id/memo_editText"
             android:layout_width="320dp"
-            android:layout_height="310dp"
+            android:layout_height="200dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="20dp"
@@ -153,8 +153,8 @@
             android:layout_width="70dp"
             android:layout_height="20dp"
             android:layout_alignParentLeft="true"
-            android:layout_centerInParent="true"
-            android:layout_marginLeft="148dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="145dp"
             android:layout_marginTop="153.37dp"
             android:gravity="center"
             android:text="오늘의 제목"
@@ -166,7 +166,7 @@
             android:layout_height="1dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="592dp"
+            android:layout_marginTop="510dp"
             android:background="?android:attr/listDivider" />
 
         <Button
@@ -176,7 +176,7 @@
             android:layout_alignParentLeft="true"
             android:layout_marginLeft="25dp"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="600dp"
+            android:layout_marginTop="518dp"
             android:background="#00000000"
             android:text="로그아웃"
             android:gravity="left"
@@ -191,7 +191,7 @@
             android:layout_alignParentLeft="true"
             android:layout_marginLeft="145dp"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="600dp"
+            android:layout_marginTop="518dp"
             android:background="#00000000"
             android:text="메인"
             android:gravity="left"
@@ -206,7 +206,7 @@
             android:layout_alignParentRight="true"
             android:layout_marginRight="25dp"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="600dp"
+            android:layout_marginTop="518dp"
             android:background="#00000000"
             android:text="나의 기록"
             android:gravity="right"
@@ -216,34 +216,17 @@
 
         <Button
             android:id="@+id/upload"
-            android:layout_width="69dp"
-            android:layout_height="22dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/memo_editText"
             android:layout_alignParentStart="true"
             android:layout_alignParentBottom="true"
-            android:layout_gravity="center_vertical"
             android:layout_marginStart="18dp"
             android:layout_marginBottom="68dp"
+            android:backgroundTint="#C6E3EF"
             android:text="사진업로드" />
-
-        <LinearLayout
-            android:id="@+id/page"
-            android:layout_width="200dp"
-            android:layout_height="match_parent"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="0dp"
-            android:layout_marginBottom="0dp"
-            android:orientation="vertical"
-            android:visibility="invisible">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="사진 업로드" />
-        </LinearLayout>
 
 
     </RelativeLayout>
 
 </FrameLayout>
-

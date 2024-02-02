@@ -63,7 +63,6 @@ class DBManager(context:Context,
 
         DB.close()
 
-
         return result
 
     }
