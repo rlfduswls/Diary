@@ -5,10 +5,17 @@ import android.database.Cursor
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
+import org.w3c.dom.Text
+import java.io.BufferedReader
 import java.io.File
+import java.io.FileInputStream
+import java.io.InputStreamReader
 
 class DiaryListActivity : AppCompatActivity() {
 
+    lateinit var title1 :TextView
+    lateinit var memo1 : TextView
     //다이어리 목록
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,13 +23,17 @@ class DiaryListActivity : AppCompatActivity() {
         setContentView(R.layout.activity_diary_list)
 
 
+        title1 = findViewById(R.id.title1)
+        memo1 = findViewById(R.id.memo1)
+
+
 
         var tab1Button: Button = findViewById(R.id.logout)
         var tab2Button: Button = findViewById(R.id.main)
         var tab3Button: Button = findViewById(R.id.list)
 
-        var fileManager: FileManager = FileManager()
-        var cursor: Cursor
+        viewListOfFiles()
+
 
         tab1Button.setOnClickListener {
             // tab1 클릭 시 동작
@@ -45,5 +56,31 @@ class DiaryListActivity : AppCompatActivity() {
             startActivity(intent)
 
         }
+    }
+
+    private fun viewListOfFiles() {
+        val files: Array<String> = fileList()
+
+        for (filename in files) {
+            val fileContents = readFileContents(filename)
+            title1.text = filename
+            memo1.text = fileContents
+
+        }
+    }
+
+    private fun readFileContents(filename: String): String {
+        val inputStream: FileInputStream = openFileInput(filename)
+        val inputStreamReader = InputStreamReader(inputStream)
+        val bufferedReader = BufferedReader(inputStreamReader)
+        val stringBuilder = StringBuilder()
+        var text: String?
+
+        while (bufferedReader.readLine().also { text = it } != null) {
+            stringBuilder.append(text).append("\n")
+        }
+
+        bufferedReader.close()
+        return stringBuilder.toString()
     }
 }
