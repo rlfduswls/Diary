@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.CalendarView
 import android.widget.EditText
@@ -130,6 +131,7 @@ class DiaryActivity : AppCompatActivity() {
 
             fos = openFileOutput(filename, MODE_PRIVATE)
             fos.write(fileContent.toByteArray())
+            Log.d("aaa", "file    "+ fileContent)
             fos.close()
 
         }catch (e:Exception){

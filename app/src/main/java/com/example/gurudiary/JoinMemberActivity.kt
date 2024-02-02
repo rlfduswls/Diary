@@ -1,5 +1,6 @@
 package com.example.gurudiary
 
+import android.content.Intent
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import androidx.appcompat.app.AppCompatActivity
@@ -79,6 +80,8 @@ class JoinMemberActivity : AppCompatActivity() {
                 if(join)
                 {
                     Toast.makeText(this,"가입 완료!",Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this, MainActivity::class.java)
+                    startActivity(intent)
                 }
                 else{
                     Toast.makeText(this,"문제가 발생했습니다. 다시 시도해보세요.",Toast.LENGTH_SHORT).show()
