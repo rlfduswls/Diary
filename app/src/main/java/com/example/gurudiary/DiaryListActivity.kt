@@ -74,7 +74,7 @@ class DiaryListActivity : AppCompatActivity() {
         for (filename in files) {
 
             val fileContents = readFileContents(filename)
-            when (index) {
+            when (index%3) {
                 0 -> {
                     title1.text = filename
                     memo1.text = fileContents
