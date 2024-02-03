@@ -22,10 +22,6 @@ class JoinMemberActivity : AppCompatActivity() {
     lateinit var pass: EditText
     lateinit var tel: EditText
     lateinit var submit: Button
-    lateinit var dlg1:DialogManager1
-    lateinit var dlg2:DialogManager2
-    lateinit var dlg3:DialogManager3
-
     // 뷰에서 받아올 정보들
     //이 정보들을 db로 업데이트 할 예정입니다
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,9 +37,6 @@ class JoinMemberActivity : AppCompatActivity() {
 
         dbMember = DBManager(this, "member", null,1)//회원관리용 db 생성
 
-        dlg1 = DialogManager1(this)
-        dlg2 = DialogManager2(this)
-        dlg3 = DialogManager3(this)
 
 
 
@@ -53,12 +46,12 @@ class JoinMemberActivity : AppCompatActivity() {
             var res = dbMember.checkUser(str_id) //해당 id가 존재하면 true를 반환하는 함수
 
             if(res){
-                dlg2.showDig()
+
                 Toast.makeText(this,"이미 존재하는 아이디입니다.",Toast.LENGTH_SHORT).show()
             }
 
             else{
-                dlg1.showDig()
+
                 Toast.makeText(this,"중복되지 않는 아이디입니다.",Toast.LENGTH_SHORT).show()
             }
         }
@@ -71,7 +64,6 @@ class JoinMemberActivity : AppCompatActivity() {
 
             if(str_name==""||str_id==""||str_pass==""||str_tel=="")
             {
-                dlg3.showDig()
                 Toast.makeText(this,"회원 정보를 모두 입력해주세요.",Toast.LENGTH_SHORT).show()
             }
 
